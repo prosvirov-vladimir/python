@@ -33,6 +33,8 @@ print(5**2)
 
 a = 4
 b = 10
+с = (10 + 4) - 25
+print(с)
 print("a =", a, "b =", b)
 a, b = b, a
 print("a =", a, "b =", b)
