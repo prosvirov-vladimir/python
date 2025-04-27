@@ -127,3 +127,100 @@ print(myList[0])
 print(myList[3])
 print(myList[2:4])
 print(myList[1:])
+
+# кортежи (tuples)
+myTuple = (78, 89.9, True, "Строка")
+print(myTuple)
+print(myTuple[0])
+print(myTuple[3])
+print(myTuple[2:4])
+print(myTuple[1:])
+
+# словари (dictionary)
+myDict = {"name": "Vladimir", "role": "QA", 123: "test-value", 456: 567.67}
+print(myDict)
+print(myDict["name"])
+print(myDict[123])
+print(myDict[456])
+# print(myDict[0]) будет ошибка т.к. нет ключа 0
+name = "Vladimir"
+myDict = {
+      "name": name,
+      "role": "QA"
+}
+print(myDict["name"])
+print(myDict.keys())
+print(myDict.values())
+
+# множества (sets)
+myList = [1, 2, 2, 3, 3, 3, 4, 5, 6 , 7]
+mySet = set(myList)
+print(mySet)
+
+myList = ["Добрый", "добрый", "день", "день"]
+mySet = set(myList)
+print(mySet)
+
+# преобразование типов данных
+a = 5
+a = "строка"
+a = [5,5,6]
+
+x = 5.67
+x = int(x)
+print(x)
+x = str(x)
+print(x+"строка")
+x = float(x)
+print(x)
+
+a = "Привет мир!"
+a = list(a)
+print(a)
+
+myList = [1, 2, 2, 3, 3, 3, 4, 5, 6 , 7]
+mySet = set(myList)
+myList = list(mySet)
+print(myList)
+
+myTuple = tuple(myList)
+print(myTuple)
+
+print(ord("A"))
+print(chr(1072))
+print(f"\\u{ord("а"):04x}")
+
+# Операторы
+a = 5
+b = 10
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a%b)
+print(8%2)
+print(a**2)
+print(10//3)
+print(-10//3)
+
+print(5 == 5)
+print(5 != 5)
+print(5 > 10)
+print(5 < 10)
+print(5 >= 5)
+print(5 <= 10)
+
+a += b
+print(a)
+a -= b
+print(a)
+a *= b
+print(a)
+a **= b
+print(a)
+a /= b
+print(a)
+a //= b
+print(a)
+a %= b
+print(a)
