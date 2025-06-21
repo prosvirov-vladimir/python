@@ -219,40 +219,66 @@
 # True,	если	точка	с	заданными	координатами	находится	внутри	треугольника,
 # заданного координатами трёх своих вершин.
 
-def side_length(x1, y1, x2, y2):
-    return ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+# def side_length(x1, y1, x2, y2):
+#     return ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+#
+# def heron_triangle_area(a, b, c):
+#     p = (a + b + c) / 2
+#     return (p * (p - a) * (p - b) * (p - c))**0.5
+#
+# def pointinTriangle(px, py, x1, y1, x2, y2, x3, y3):
+#     # Стороны и площадь исходного треугольника ABC
+#     a = side_length(x1, y1, x2, y2)
+#     b = side_length(x2, y2, x3, y3)
+#     c = side_length(x3, y3, x1, y1)
+#     area_abc = heron_triangle_area(a, b, c)
+#
+#     # Стороны и площадь треугольника PAB
+#     a1 = side_length(px, py, x1, y1)
+#     b1 = side_length(px, py, x2, y2)
+#     c1 = side_length(x1, y1, x2, y2)
+#     area_pab = heron_triangle_area(a1, b1, c1)
+#
+#     # Стороны и площадь треугольника PBC
+#     a2 = side_length(px, py, x2, y2)
+#     b2 = side_length(px, py, x3, y3)
+#     c2 = side_length(x2, y2, x3, y3)
+#     area_pbc = heron_triangle_area(a2, b2, c2)
+#
+#     # Стороны и площадь треугольника PCA
+#     a3 = side_length(px, py, x3, y3)
+#     b3 = side_length(px, py, x1, y1)
+#     c3 = side_length(x3, y3, x1, y1)
+#     area_pca = heron_triangle_area(a3, b3, c3)
+#
+#     total_area = area_pab + area_pbc + area_pca
+#
+#     return round(total_area, 5) == round(area_abc, 5)
+#
+# print(pointinTriangle(1, 1, 0, 0, 4, 0, 0,3))
 
-def heron_triangle_area(a, b, c):
-    p = (a + b + c) / 2
-    return (p * (p - a) * (p - b) * (p - c))**0.5
 
-def pointinTriangle(px, py, x1, y1, x2, y2, x3, y3):
-    # Стороны и площадь исходного треугольника ABC
-    a = side_length(x1, y1, x2, y2)
-    b = side_length(x2, y2, x3, y3)
-    c = side_length(x3, y3, x1, y1)
-    area_abc = heron_triangle_area(a, b, c)
+# пример рекурсии 1
+# def F(n):
+#     print(n)
+#     if n < 5:
+#         F(n + 1)
+#         F(n + 3)
+#
+# F(1)
 
-    # Стороны и площадь треугольника PAB
-    a1 = side_length(px, py, x1, y1)
-    b1 = side_length(px, py, x2, y2)
-    c1 = side_length(x1, y1, x2, y2)
-    area_pab = heron_triangle_area(a1, b1, c1)
+# пример рекурсии 2
+# def F(n):
+#     print(n)
+#     if n > 1:
+#         F(n - 1)
+#         F(n - 3)
+#
+# F(6)
 
-    # Стороны и площадь треугольника PBC
-    a2 = side_length(px, py, x2, y2)
-    b2 = side_length(px, py, x3, y3)
-    c2 = side_length(x2, y2, x3, y3)
-    area_pbc = heron_triangle_area(a2, b2, c2)
-
-    # Стороны и площадь треугольника PCA
-    a3 = side_length(px, py, x3, y3)
-    b3 = side_length(px, py, x1, y1)
-    c3 = side_length(x3, y3, x1, y1)
-    area_pca = heron_triangle_area(a3, b3, c3)
-
-    total_area = area_pab + area_pbc + area_pca
-
-    return round(total_area, 5) == round(area_abc, 5)
-
-print(pointinTriangle(1, 1, 0, 0, 4, 0, 0,3))
+# пример проверки (get) и установки (set) глубины рекурсии
+# import sys
+#
+# print(sys.getrecursionlimit())
+# sys.setrecursionlimit(2000)
+# print(sys.getrecursionlimit())
